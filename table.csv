@@ -1,0 +1,236 @@
+AF;Afghanistan;AFN
+AL;Albania;ALL
+DZ;Algeria;DZD
+AS;American Samoa;USD
+AD;Andorra;EUR
+AO;Angola;AOA
+AI;Anguilla;XCD
+AQ;Antarctica;XCD
+AG;Antigua and Barbuda;XCD
+AR;Argentina;ARS
+AM;Armenia;AMD
+AW;Aruba;AWG
+AU;Australia;AUD
+AT;Austria;EUR
+AZ;Azerbaijan;AZN
+BS;Bahamas;BSD
+BH;Bahrain;BHD
+BD;Bangladesh;BDT
+BB;Barbados;BBD
+BY;Belarus;BYR
+BE;Belgium;EUR
+BZ;Belize;BZD
+BJ;Benin;XOF
+BM;Bermuda;BMD
+BT;Bhutan;BTN
+BO;Bolivia;BOB
+BA;Bosnia-Herzegovina;BAM
+BW;Botswana;BWP
+BV;Bouvet Island;NOK
+BR;Brazil;BRL
+IO;British Indian Ocean Territory;USD
+BN;Brunei Darussalam;BND
+BG;Bulgaria;BGN
+BF;Burkina Faso;XOF
+BI;Burundi;BIF
+KH;Cambodia;KHR
+CM;Cameroon;XAF
+CA;Canada;CAD
+CV;Cape Verde;CVE
+KY;Cayman Islands;KYD
+CF;Central African Republic;XAF
+TD;Chad;XAF
+CL;Chile;CLP
+CN;China;CNY
+CX;Christmas Island;AUD
+CC;Cocos (Keeling) Islands;AUD
+CO;Colombia;COP
+KM;Comoros;KMF
+CG;Congo;XAF
+CD;Congo Dem. Republic;CDF
+CK;Cook Islands;NZD
+CR;Costa Rica;CRC
+HR;Croatia;HRK
+CU;Cuba;CUP
+CY;Cyprus;EUR
+CZ;Czech Rep.;CZK
+DK;Denmark;DKK
+DJ;Djibouti;DJF
+DM;Dominica;XCD
+DO;Dominican Republic;DOP
+EC;Ecuador;ECS
+EG;Egypt;EGP
+SV;El Salvador;SVC
+GQ;Equatorial Guinea;XAF
+ER;Eritrea;ERN
+EE;Estonia;EUR
+ET;Ethiopia;ETB
+FK;Falkland Islands (Malvinas);FKP
+FO;Faroe Islands;DKK
+FJ;Fiji;FJD
+FI;Finland;EUR
+FR;France;EUR
+GF;French Guiana;EUR
+TF;French Southern Territories;EUR
+GA;Gabon;XAF
+GM;Gambia;GMD
+GE;Georgia;GEL
+DE;Germany;EUR
+GH;Ghana;GHS
+GI;Gibraltar;GIP
+GB;Great Britain;GBP
+GR;Greece;EUR
+GL;Greenland;DKK
+GD;Grenada;XCD
+GP;Guadeloupe (French);EUR
+GU;Guam (USA);USD
+GT;Guatemala;QTQ
+GG;Guernsey;GGP
+GN;Guinea;GNF
+GW;Guinea Bissau;GWP
+GY;Guyana;GYD
+HT;Haiti;HTG
+HM;Heard Island and McDonald Islands;AUD
+HN;Honduras;HNL
+HK;Hong Kong;HKD
+HU;Hungary;HUF
+IS;Iceland;ISK
+IN;India;INR
+ID;Indonesia;IDR
+IR;Iran;IRR
+IQ;Iraq;IQD
+IE;Ireland;EUR
+IM;Isle of Man;GBP
+IL;Israel;ILS
+IT;Italy;EUR
+CI;Ivory Coast;XOF
+JM;Jamaica;JMD
+JP;Japan;JPY
+JE;Jersey;GBP
+JO;Jordan;JOD
+KZ;Kazakhstan;KZT
+KE;Kenya;KES
+KI;Kiribati;AUD
+KP;Korea-North;KPW
+KR;Korea-South;KRW
+KW;Kuwait;KWD
+KG;Kyrgyzstan;KGS
+LA;Laos;LAK
+LV;Latvia;LVL
+LB;Lebanon;LBP
+LS;Lesotho;LSL
+LR;Liberia;LRD
+LY;Libya;LYD
+LI;Liechtenstein;CHF
+LT;Lithuania;LTL
+LU;Luxembourg;EUR
+MO;Macau;MOP
+MK;Macedonia;MKD
+MG;Madagascar;MGF
+MW;Malawi;MWK
+MY;Malaysia;MYR
+MV;Maldives;MVR
+ML;Mali;XOF
+MT;Malta;EUR
+MH;Marshall Islands;USD
+MQ;Martinique (French);EUR
+MR;Mauritania;MRO
+MU;Mauritius;MUR
+YT;Mayotte;EUR
+MX;Mexico;MXN
+FM;Micronesia;USD
+MD;Moldova;MDL
+MC;Monaco;EUR
+MN;Mongolia;MNT
+ME;Montenegro;EUR
+MS;Montserrat;XCD
+MA;Morocco;MAD
+MZ;Mozambique;MZN
+MM;Myanmar;MMK
+NA;Namibia;NAD
+NR;Nauru;AUD
+NP;Nepal;NPR
+NL;Netherlands;EUR
+NC;New Caledonia (French);XPF
+NZ;New Zealand;NZD
+NI;Nicaragua;NIO
+NE;Niger;XOF
+NG;Nigeria;NGN
+NU;Niue;NZD
+NF;Norfolk Island;AUD
+MP;Northern Mariana Islands;USD
+NO;Norway;NOK
+OM;Oman;OMR
+PK;Pakistan;PKR
+PW;Palau;USD
+PA;Panama;PAB
+PG;Papua New Guinea;PGK
+PY;Paraguay;PYG
+PE;Peru;PEN
+PH;Philippines;PHP
+PL;Poland;PLN
+PT;Portugal;EUR
+PR;Puerto Rico;USD
+QA;Qatar;QAR
+RE;Reunion (French);EUR
+RO;Romania;RON
+RU;Russia;RUB
+RW;Rwanda;RWF
+SH;Saint Helena;SHP
+LC;Saint Lucia;XCD
+PM;Saint Pierre and Miquelon;EUR
+WS;Samoa;WST
+SM;San Marino;EUR
+ST;Sao Tome and Principe;STD
+SA;Saudi Arabia;SAR
+SN;Senegal;XOF
+RS;Serbia;RSD
+SC;Seychelles;SCR
+SL;Sierra Leone;SLL
+SG;Singapore;SGD
+SK;Slovakia;EUR
+SI;Slovenia;EUR
+SB;Solomon Islands;SBD
+SO;Somalia;SOS
+ZA;South Africa;ZAR
+GS;South Georgia & South Sandwich Islands;GBP
+SS;South Sudan;SSP
+ES;Spain;EUR
+LK;Sri Lanka;LKR
+SD;Sudan;SDG
+SR;Suriname;SRD
+SZ;Swaziland;SZL
+SE;Sweden;SEK
+CH;Switzerland;CHF
+sy;Syria;SYP
+tw;Taiwan;TWD
+TJ;Tajikistan;TJS
+tz;Tanzania;TZS
+TH;Thailand;THB
+TG;Togo;XOF
+TK;Tokelau;NZD
+TO;Tonga;TOP
+TT;Trinidad and Tobago;TTD
+TN;Tunisia;TND
+TR;Turkey;TRY
+TM;Turkmenistan;TMT
+TC;Turks and Caicos Islands;USD
+TV;Tuvalu;AUD
+uk;U.K.;GBP
+UG;Uganda;UGX
+UA;Ukraine;UAH
+AE;United Arab Emirates;AED
+UY;Uruguay;UYU
+us;USA;USD
+UZ;Uzbekistan;UZS
+VU;Vanuatu;VUV
+VA;Vatican;EUR
+VE;Venezuela;VEF
+VN;Vietnam;VND
+VG;Virgin Islands (British);USD
+VI;Virgin Islands U.S.;USD
+WF;Wallis and Futuna;XPF
+EH;Western Sahara;MAD
+YE;Yemen;YER
+ZM;Zambia;ZMW
+ZW;Zimbabwe;ZWD

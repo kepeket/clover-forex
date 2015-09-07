@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".CalcActivity"
+    android:theme="@android:style/Theme.Holo.Light">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingRight="15dp"
+            android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30dip"
+                    android:id="@+id/thanks"
+                    android:text="@string/merchant_forex_calc"
+                    android:layout_gravity="center_horizontal|top" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/thanks"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/thanks_long_text"
+                    android:id="@+id/thanks_long"
+                    android:textSize="20dip"
+                    android:layout_gravity="center" />
+
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:inputType="none"
+                android:text="0.00"
+                android:ems="00"
+                android:textSize="25sp"
+                android:gravity="right|center_vertical"
+                android:paddingRight="50dp"
+                android:background="@android:color/background_light"
+                android:id="@+id/input_field"
+                android:layout_below="@+id/thanks_long"
+                android:layout_alignParentStart="true"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dip"
+                android:text="USD"
+                android:id="@+id/currency_label"
+                android:layout_alignBottom="@+id/input_field"
+                android:layout_alignTop="@+id/input_field"
+                android:paddingLeft="5dp"
+                android:gravity="center"
+                android:layout_below="@+id/thanks_long"
+                android:layout_toRightOf="@+id/input_field"/>
+
+            <include layout="@layout/keypad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@id/input_field"
+                android:id="@+id/include"></include>
+
+
+
+
+        </RelativeLayout>
+
+        <ListView
+            android:background="#fff"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/prices" />
+    </LinearLayout>
+</RelativeLayout>

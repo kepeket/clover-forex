@@ -1,6 +1,13 @@
 <resources>
-    <string name="app_name">Forex</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="application_name">Forex - currency converter</string>
+    <string name="thanks_for_purchase">Thanks for your Purchase!</string>
+    <string name="thanks_long_text">Type the amount to see instant convertion</string>
+    <string name="what_you_paid">Amount paid:</string>
+    <string name="convenience">Currency exchange rates provided for your convenience only, and may differ from the rate used by your financial institution</string>
+    <string name="oer_app_id">5284d2ae72e9418ea4b32fdfff47793d</string>
+    <string name="convert">Convert</string>
+    <string name="merchant_forex_calc">Merchant Forex calculator</string>
+    <string name="eurozone">Euro Zone</string>
+    <string name="exit">Done</string>
+    <string name="other_cur">Amount paid in other currencies  (Today\'s rate)</string>
 </resources>

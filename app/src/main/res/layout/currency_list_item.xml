@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/flag"
+        android:src="@drawable/fr"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text"
+        android:layout_toRightOf="@+id/flag"
+        android:layout_alignTop="@+id/flag"
+        android:id="@+id/country_name"
+        android:layout_gravity="left|top"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18dip" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text"
+        android:layout_alignStart="@+id/country_name"
+        android:layout_toRightOf="@+id/flag"
+        android:layout_alignBottom="@+id/flag"
+        android:gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/country_name"
+        android:id="@+id/rate"
+        android:textStyle="italic"
+        android:textSize="14dip" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text"
+        android:textSize="15dip"
+        android:layout_toLeftOf="@+id/price"
+        android:layout_alignBaseline="@id/price"
+        android:layout_marginRight="5dp"
+        android:id="@+id/currency" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dip"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/flag"
+        android:layout_marginBottom="5dp"
+        android:text="Large Text"
+        android:id="@+id/price" />
+
+</RelativeLayout>

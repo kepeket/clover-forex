@@ -3,9 +3,96 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:theme="@android:style/Theme.Holo.Light">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
 
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:paddingRight="15dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30dip"
+                    android:id="@+id/thanks"
+                    android:text="@string/thanks_for_purchase"
+                    android:layout_gravity="center_horizontal|top" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/what_you_paid"
+                    android:layout_marginTop="25dp"
+                    android:id="@+id/intro"
+                    android:textSize="25dip"
+                    android:layout_below="@+id/thanks" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/intro"
+                    android:text="69,00"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/price"
+                    android:textSize="65dip" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/price"
+                    android:layout_alignBaseline="@+id/price"
+                    android:text="EUR"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/currency"
+                    android:textSize="35dip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price"
+                android:text="@string/convenience"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:id="@+id/outro"
+                android:textSize="20dip" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="@string/exit"
+                android:id="@+id/donebutton"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="18sp"
+                android:text="@string/other_cur"/>
+            <ListView
+                android:background="#fff"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/prices" />
+
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
