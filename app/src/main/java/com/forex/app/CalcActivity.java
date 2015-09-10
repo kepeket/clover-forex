@@ -1,10 +1,13 @@
 package com.forex.app;
 
 import android.accounts.Account;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -111,40 +114,49 @@ public class CalcActivity extends ActionBarActivity {
 
         String sort = RateOpenHelper.COUNTRY_NAME + " ASC";
 
-        Cursor c = db.query(
-                RateOpenHelper.DICTIONARY_TABLE_NAME,  // The table to query
-                projection,                               // The columns to return
-                null,                                // The columns for the WHERE clause
-                null,                            // The values for the WHERE clause
-                null,                                     // don't group the rows
-                null,                                     // don't filter by row groups
-                sort                                 // The sort order
-        );
+        try {
+            Cursor c = db.query(
+                    RateOpenHelper.DICTIONARY_TABLE_NAME,  // The table to query
+                    projection,                               // The columns to return
+                    null,                                // The columns for the WHERE clause
+                    null,                            // The values for the WHERE clause
+                    null,                                     // don't group the rows
+                    null,                                     // don't filter by row groups
+                    sort                                 // The sort order
+            );
 
-        c.moveToFirst();
-        if (c.getCount() > 0){
-            List<String> fav = Arrays.asList(new String[]{"FR", "USA", "GB", "BR", "JP", "CN", "MX", "IL", "AR", "AU", "CA", "CH", "EC", "KR", "SE", "TR"});
-            mCountryList.clear();
-            mCountryList.addAll(Collections.nCopies(fav.size()-1, (Country)null));
-            String iso;
-            int pos;
-            while (!c.isLast()){
-                if (c.getString(c.getColumnIndexOrThrow(RateOpenHelper.CURRENCY_CODE)).toLowerCase() != null) {
-                    iso = c.getString(c.getColumnIndexOrThrow(RateOpenHelper.COUNTRY_CODE)).toUpperCase();
-                    if (fav.contains(iso)) {
-                        iso = iso.equals("FR")?"eur":iso.toLowerCase();
-                        Country ctry = new Country(iso,
-                                iso.equals("eur")?"eur":c.getString(c.getColumnIndexOrThrow(RateOpenHelper.CURRENCY_CODE)),
-                                iso.equals("eur")?getString(R.string.eurozone):c.getString(c.getColumnIndexOrThrow(RateOpenHelper.COUNTRY_NAME)),
-                                c.getDouble(c.getColumnIndexOrThrow(RateOpenHelper.RATE)));
-                        pos = fav.indexOf(iso.toUpperCase());
-                        mCountryList.set(pos > -1 ? pos < mCountryList.size() ? pos : mCountryList.size()-1 : 0, ctry);
+            c.moveToFirst();
+            if (c.getCount() > 0) {
+                List<String> fav = Arrays.asList(new String[]{"FR", "USA", "GB", "BR", "JP", "CN", "MX", "IL", "AR", "AU", "CA", "CH", "EC", "KR", "SE", "TR"});
+                mCountryList.clear();
+                mCountryList.addAll(Collections.nCopies(fav.size() - 1, (Country) null));
+                String iso;
+                int pos;
+                while (!c.isLast()) {
+                    if (c.getString(c.getColumnIndexOrThrow(RateOpenHelper.CURRENCY_CODE)).toLowerCase() != null) {
+                        iso = c.getString(c.getColumnIndexOrThrow(RateOpenHelper.COUNTRY_CODE)).toUpperCase();
+                        if (fav.contains(iso)) {
+                            iso = iso.equals("FR") ? "eur" : iso.toLowerCase();
+                            Country ctry = new Country(iso,
+                                    iso.equals("eur") ? "eur" : c.getString(c.getColumnIndexOrThrow(RateOpenHelper.CURRENCY_CODE)),
+                                    iso.equals("eur") ? getString(R.string.eurozone) : c.getString(c.getColumnIndexOrThrow(RateOpenHelper.COUNTRY_NAME)),
+                                    c.getDouble(c.getColumnIndexOrThrow(RateOpenHelper.RATE)));
+                            pos = fav.indexOf(iso.toUpperCase());
+                            mCountryList.set(pos > -1 ? pos < mCountryList.size() ? pos : mCountryList.size() - 1 : 0, ctry);
+                        }
                     }
+                    c.moveToNext();
                 }
-                c.moveToNext();
+                mCountryList.removeAll(Collections.singleton(null));
+                mCountryListAdapter.notifyDataSetChanged();
             }
-            mCountryList.removeAll(Collections.singleton(null));
-            mCountryListAdapter.notifyDataSetChanged();
+        }
+        catch (SQLiteException e){
+            AlertDialog.Builder d = new AlertDialog.Builder(this);
+            d.setMessage(getString(R.string.installation_done));
+
+            AlertDialog dlg = d.create();
+            dlg.show();
         }
         db.close();
     }

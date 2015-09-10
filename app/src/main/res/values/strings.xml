@@ -10,4 +10,6 @@
     <string name="eurozone">Euro Zone</string>
     <string name="exit">Done</string>
     <string name="other_cur">Amount paid in other currencies  (Today\'s rate)</string>
+    <string name="installation_done">Installation successful, please restart the app.</string>
+    <string name="ok">OK</string>
 </resources>
