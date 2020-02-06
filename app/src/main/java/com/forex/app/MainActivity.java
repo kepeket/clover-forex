@@ -34,6 +34,9 @@ import java.util.Currency;
 import java.util.Iterator;
 import java.util.List;
 
+import io.fabric.sdk.android.Fabric;
+import com.crashlytics.android.answers.Answers;
+import com.crashlytics.android.answers.CustomEvent;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -52,10 +55,19 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        if (getResources().getConfiguration().orientation == getResources().getConfiguration().ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.activity_main);
+        }
+        else {
+            setContentView(R.layout.activity_main_portrait);
+        }
         mAccount = CloverAccount.getAccount(this);
         mPref = getSharedPreferences(FOREX_PREF, 0);
         mAmount = getIntent().getLongExtra("amount", 0l) / 100f;
+        Fabric.with(this, new Answers());
+        Answers.getInstance().logCustom(new CustomEvent("Conversion made")
+                .putCustomAttribute("Amount", mAmount));
+        // now start the Loader to query Inventory
         TextView price = (TextView)findViewById(R.id.price);
         price.setText(String.format("%.2f", (float)mAmount));
         Button exit = (Button) findViewById(R.id.donebutton);
@@ -88,7 +100,6 @@ public class MainActivity extends ActionBarActivity {
 
                 refreshRates();
                 initRateList();
-                // now start the Loader to query Inventory
             }
 
             @Override

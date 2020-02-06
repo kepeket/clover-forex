@@ -1,5 +1,5 @@
 <resources>
-    <string name="application_name">Forex - currency converter</string>
+    <string name="application_name">Foreign Currency Buddy</string>
     <string name="thanks_for_purchase">Thanks for your Purchase!</string>
     <string name="thanks_long_text">Type the amount to see instant convertion</string>
     <string name="what_you_paid">Amount paid:</string>
@@ -12,4 +12,8 @@
     <string name="other_cur">Amount paid in other currencies  (Today\'s rate)</string>
     <string name="installation_done">Installation successful, please restart the app.</string>
     <string name="ok">OK</string>
+    <string name="title_activity_orientation">orientation</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>

@@ -25,8 +25,10 @@ import com.clover.sdk.v1.ResultStatus;
 import com.clover.sdk.v1.ServiceConnector;
 import com.clover.sdk.v1.merchant.Merchant;
 import com.clover.sdk.v1.merchant.MerchantConnector;
+import com.crashlytics.android.Crashlytics;
 import com.forex.app.db.RateOpenHelper;
 
+import io.fabric.sdk.android.Fabric;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -58,6 +60,7 @@ public class CalcActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_calc);
         mAccount = CloverAccount.getAccount(this);
         mPref = getSharedPreferences(FOREX_PREF, 0);

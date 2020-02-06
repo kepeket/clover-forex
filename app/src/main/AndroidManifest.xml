@@ -15,10 +15,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/application_name"
-            android:noHistory="true"
-            android:screenOrientation="landscape" >
+            android:noHistory="true">
         </activity>
-
         <activity
             android:name=".CalcActivity"
             android:label="@string/application_name"
@@ -30,12 +28,17 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".PaymentDoneReceiver">
+        <receiver android:name=".PaymentDoneReceiver" >
             <intent-filter>
                 <action android:name="com.clover.intent.action.PAYMENT_PROCESSED" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="e3b8bdff9f0d4007d1fdea6f4087917c6fb4bc40" />
     </application>
 
 </manifest>
