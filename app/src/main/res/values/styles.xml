@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.Forex" parent="android:Theme.DeviceDefault.Light">
+    </style>
+
+    <style name="AppTheme.Forex.Title" parent="AppTheme.Forex">
+        <item name="android:textSize">53sp</item>
+        <item name="android:textColor">#2196F3</item>
+    </style>
+</resources>
